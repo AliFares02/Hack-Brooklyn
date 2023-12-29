@@ -5,4 +5,12 @@ function handleMessages(request) {
   }
 }
 
+function bookmarkCurrentTab() {
+  chrome.runtime.sendMessage({ bookmarkCurrentTab: true });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('bookmarkButton').addEventListener('click', bookmarkCurrentTab);
+});
+
 chrome.runtime.onMessage.addListener(handleMessages);

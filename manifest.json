@@ -3,10 +3,12 @@
   "name": "Text extraction",
   "version": "1.0",
   "description": "description",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "bookmarks"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "action": {
-    "default_popup": "popup.html",
-    "js": ["popup.js"]
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
@@ -15,12 +17,15 @@
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "js": ["background.js"]
   },
-  "web_accessible_resources": [ 
+  "web_accessible_resources": [
     {
       "resources": ["popup.html"],
       "matches": ["<all_urls>"]
     }
   ]
 }
+
+
