@@ -1,3 +1,3 @@
-console.log("Content script loaded!");
+const currentUrl = window.location.href;
 
-
+chrome.runtime.sendMessage({ url: currentUrl });
