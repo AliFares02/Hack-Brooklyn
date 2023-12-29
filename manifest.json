@@ -1,17 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "Your Extension Name",
+  "name": "Text extractor",
   "version": "1.0",
-  "description": "Description of your extension",
-  "permissions": ["activeTab"],
+  "description": "description",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Click me!"
+    "js": ["popup.js"]
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [ 
+    {
+      "resources": ["popup.html"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
