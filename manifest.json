@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Text extraction",
+  "name": "Reading Summarizer",
   "version": "1.0",
-  "description": "description",
-  "permissions": ["activeTab", "bookmarks"],
+  "description": "A chrome extension that summarizes a reading",
+  "permissions": ["activeTab", "storage"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
@@ -27,5 +27,3 @@
     }
   ]
 }
-
-
