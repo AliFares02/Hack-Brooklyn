@@ -1,1 +1,4 @@
 A simple chrome extension that summarizes the text of an article or reading thats on screen. It does so by utilizing multiple api's.
+Note: If you plan on using the extension head to these 2 links: https://rapidapi.com/artemsementsov/api/article-data-extraction-and-summarization
+and https://rapidapi.com/rphrp1985/api/chatgpt-42
+and make sure to create an account and obtain your api key by scrolling down to "Header Parameters" in the middle console and next to "X-RapidAPI-Host" will be your api key. Make sure to also hit "Subscribe to Test" on both apis and subscribe to the "Basic" version, which is free, of both apis so your api key can be used. Than grab your api key and replace both existing "X-RapidAPI-Host" api keys in popup.js with it and you should be good to go. Also, if the extension gives an incorrect summary or is buggy just refresh the webpage and try again. It is preferrable to use the extension on article/reading webpages. 
